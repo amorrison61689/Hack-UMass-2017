@@ -13,11 +13,11 @@ function getLocation() {
     }
 }
 var xhttp = new XMLHttpRequest();
-var xhttp_response_data;
-var pos;
+
 function showPosition(position) {
-    pos = position;
     x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+
+    refreshMap(position);
 
     xhttp.addEventListener("load", transferComplete);
     xhttp.addEventListener("error", error);
@@ -42,15 +42,36 @@ function showPosition(position) {
         console.log(xhttp.readyState);
         console.log(xhttp.status);
     }
-
-    /*Google Maps API: https://developers.google.com/maps/documentation/javascript/tutorial*/
-    var map;
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 42.391148799999996, lng:  -72.5261544},
-            // center: { lat: pos.coords.latitude, lng: pos.coords.longitude },
-            zoom: 8
-        });
-    }
 }
 document.getElementById("autoFill").addEventListener('click', getLocation);
+
+ /*Google Maps API: https://developers.google.com/maps/documentation/javascript/tutorial*/
+ var map;
+ var marker;
+ function initMap() {
+     map = new google.maps.Map(document.getElementById('map'), {
+         center: {lat: 39, lng:  -72.5261544},
+         zoom: 8
+     });
+
+     marker = new google.maps.Marker({
+        position: { lat: 39, lng: -72.5261533},
+        map: map,
+        title: 'Hello World!'
+      });
+ }
+
+ function refreshMap(position) {
+    map = new google.maps.Map(document.getElementById('map'), {
+        // center: {lat: 42.391148799999996, lng:  -72.5261544},
+        center: { lat: position.coords.latitude, lng: position.coords.longitude},
+        zoom: 8
+    });
+
+    marker = new google.maps.Marker({
+        position: { lat: position.coords.latitude, lng: position.coords.longitude },
+        map: map,
+        title: 'Hello World!'
+      });
+
+ }
