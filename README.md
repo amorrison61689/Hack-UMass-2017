@@ -6,26 +6,26 @@
 
 - [Overview](#Overview)
   - [Tools](#Tools)
-  - [Front End](#Front End)
+  - [Front End](#Front-End)
     - [Website](#Website)
-      - [Tree Structure of Website](#Tree Structure of Website)
-      - [Core Components of the Website](#Core Components of the Website)
-        - [Pharma Search](#Pharma Search)
-        - [Symptom Search](#Symptom Search)
-        - [Dispenser Device Web UI](#Dispenser Device Web UI)
-    - [Back End](#Back End)
+      - [Tree Structure of Website](#Tree-Structure-of-Website)
+      - [Core Components of the Website](#Core-Components-of-the-Website)
+        - [Pharma Search](#Pharma-Search)
+        - [Symptom Search](#Symptom-Search)
+        - [Dispenser Device Web UI](#Dispenser-Device-Web-UI)
+    - [Back End](#Back-End)
       - [API](#API)
         - [Algolia](#Algolia)
-        - [Google Maps](#Google Maps)
+        - [Google Maps](#Google-Maps)
     - [Hardware](#Hardware)
-      - [Dispenser Device](#Dispenser Device)
+      - [Dispenser Device](#Dispenser-Device)
         - [(Prototype)](#(Prototype))
-  - [Competing Prizing](#Competing Prizing)
-    - [Currently Eligible](#Currently Eligible)
-    - [Planning to be Eligible](#Planning to be Eligible)
-      - [Priority 1](#Priority 1)
-      - [Priority 2](#Priority 2)
-      - [Priority 3](#Priority 3)
+  - [Competing Prizing](#Competing-Prizing)
+    - [Currently Eligible](#Currently-Eligible)
+    - [Planning to be Eligible](#Planning-to-be-Eligible)
+      - [Priority 1](#Priority-1)
+      - [Priority 2](#Priority-2)
+      - [Priority 3](#Priority-3)
 
 ## Overview
 
@@ -37,9 +37,9 @@
   - Internet of Things (Messaging protocol with Raspberry Pi)
   - S3 (Later)
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
-### Front End
+### Front-End
 
 #### Website
 
@@ -61,7 +61,7 @@ Home page
 		- Bookmarked pharmacy and medicince pair
 ```
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
 ##### Core Components of the Website
 
@@ -78,7 +78,7 @@ Home page
 
 - Users can pair their online account with the Raspberry Pi device that emulates the basic functions of the medicine dispenser by indicating different states via light sensors.
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
 ### Back End
 
@@ -92,7 +92,7 @@ Home page
 
 - Show locations of pharmacies and general stores where medicine may be purchased to relieve symptoms.
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
 ### Hardware
 
@@ -105,7 +105,7 @@ Home page
   - Dispenser will administer one pill at a time from a specific bin based on user input.
   - Dispenser keeps track of the quantity of pills in each slot.
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
 ## Competing Prizing
 
@@ -117,7 +117,7 @@ Home page
 - Algolia Search API
 - Best Use of AWS
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
 
 ### Planning to be Eligible
 
@@ -136,4 +136,4 @@ Home page
 
 - Considered best designed algorithm by Kensho
 
-[Back to Top](#Table of Contents)
+[Back to Top](#Table-of-Contents)
