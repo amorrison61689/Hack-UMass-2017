@@ -4,28 +4,27 @@
 
 ## Table of Contents
 
-- [Overview](#Overview)
-  - [Tools](#Tools)
-  - [Front End](#Front-End)
-    - [Website](#Website)
-      - [Tree Structure of Website](#Tree-Structure-of-Website)
-      - [Core Components of the Website](#Core-Components-of-the-Website)
-        - [Pharma Search](#Pharma-Search)
-        - [Symptom Search](#Symptom-Search)
-        - [Dispenser Device Web UI](#Dispenser-Device-Web-UI)
-    - [Back End](#Back-End)
-      - [API](#API)
-        - [Algolia](#Algolia)
-        - [Google Maps](#Google-Maps)
-    - [Hardware](#Hardware)
-      - [Dispenser Device](#Dispenser-Device)
-        - [(Prototype)](#(Prototype))
-  - [Competing Prizing](#Competing-Prizing)
-    - [Currently Eligible](#Currently-Eligible)
-    - [Planning to be Eligible](#Planning-to-be-Eligible)
-      - [Priority 1](#Priority-1)
-      - [Priority 2](#Priority-2)
-      - [Priority 3](#Priority-3)
+- [Overview](#overview)
+  - [Tools](#tools)
+  - [Front-End](#front-end)
+    - [Website](#website)
+      - [Tree Structure of Website](#tree-structure-of-website)
+      - [Core Components of the Website](#core-components-of-the-website)
+        - [Pharma Search](#pharma-search)
+        - [Symptom Search](#symptom-search)
+        - [Dispenser Device Web UI](#dispenser-device-web-ui)
+  - [Back End](#back-end)
+    - [API](#api)
+        - [Algolia](#algolia)
+        - [Google Maps](#google-maps)
+  - [Hardware](#hardware)
+    - [Dispenser Device](#dispenser-device)
+- [Competing Prizing](#competing-prizing)
+  - [Currently Eligible](#currently-eligible)
+  - [Planning to be Eligible](#planning-to-be-eligible)
+    - [Priority 1](#priority-1)
+    - [Priority 2](#priority-2)
+    - [Priority 3](#priority-3)
 
 ## Overview
 
@@ -37,7 +36,7 @@
   - Internet of Things (Messaging protocol with Raspberry Pi)
   - S3 (Later)
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ### Front-End
 
@@ -61,7 +60,7 @@ Home page
 		- Bookmarked pharmacy and medicince pair
 ```
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ##### Core Components of the Website
 
@@ -78,7 +77,7 @@ Home page
 
 - Users can pair their online account with the Raspberry Pi device that emulates the basic functions of the medicine dispenser by indicating different states via light sensors.
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ### Back End
 
@@ -92,7 +91,7 @@ Home page
 
 - Show locations of pharmacies and general stores where medicine may be purchased to relieve symptoms.
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ### Hardware
 
@@ -105,7 +104,7 @@ Home page
   - Dispenser will administer one pill at a time from a specific bin based on user input.
   - Dispenser keeps track of the quantity of pills in each slot.
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ## Competing Prizing
 
@@ -117,7 +116,7 @@ Home page
 - Algolia Search API
 - Best Use of AWS
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
 
 ### Planning to be Eligible
 
@@ -136,4 +135,4 @@ Home page
 
 - Considered best designed algorithm by Kensho
 
-[Back to Top](#Table-of-Contents)
+[Back to Top](#table-of-contents)
