@@ -1,61 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Location</title>
-  <style> #currentLocation {float: right;} </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div id="currentLocation" ></div>
-  <input type="text" id="address" placeholder="Street Address"><br>
-  <input type="text" id="city" placeholder="City"><br>
-  <input type="text" id="state" placeholder="State"><br>
-  <input type="text" id="zip" placeholder="Postal code"><br>
-  <br><a id="autoFill" href="#"> Auto Fill </a><br>
+  <div id="currentLocation"></div>
+  <input type="text" id="address" placeholder="Street Address">
+  <br>
+  <input type="text" id="city" placeholder="City">
+  <br>
+  <input type="text" id="state" placeholder="State">
+  <br>
+  <input type="text" id="zip" placeholder="Postal code">
+  <br>
+  <br>
+  <a id="autoFill" href="#"> Auto Fill </a>
+  <br>
   <div id="geolocation"></div>
-  <!-- References:
-  http://www.w3schools.com/html/html5_geolocation.asp
-  http://wiki.openstreetmap.org/wiki/Nominatim -->
-  <script>
-  var x = document.getElementById("currentLocation");
-  function getLocation() {
-    // navigator is provided by DOM : latitude and longitude
-    if (navigator.geolocation) {
-      // showPosition is callback function: getCurrentPosition passes position (aka event handler)
-      navigator.geolocation.getCurrentPosition(showPosition);
-      // Don't need to have your owns web server, since we are using openstreetmap
-    } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
-  function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.addEventListener("load", transferComplete);
-    xhttp.addEventListener("error",error);
-
-    xhttp.open("GET", "http://nominatim.openstreetmap.org/reverse?" +
-    "format=json&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude);
-    xhttp.send();
-
-    function transferComplete(){
-      var data = JSON.parse(xhttp.response);
-      if (data.address.house_number) {
-        document.getElementById('address').value = data.address.house_number + " ";
-      }
-      document.getElementById('address').value += data.address.road;
-      document.getElementById('city').value = (data.address.town) ? data.address.town : data.address.city;
-      document.getElementById('state').value = data.address.state;
-      document.getElementById('zip').value = data.address.postcode;
-      document.getElementById("geolocation").innerHTML = xhttp.response;
-    }
-    function error(){
-      console.log(xhttp.readyState);
-      console.log(xhttp.status);
-    }
-  }
-  document.getElementById("autoFill").addEventListener('click',getLocation);
-  </script>
+  <br>
+  <br>
+  <div id="map"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7agWRnqSPBTvpvb-5CLonSFYoAj65gWk&callback=initMap"
+  async defer></script>
+  <script src="js/maps_script.js"></script>
+  <script src="js/location.js"></script>
 </body>
+
 </html>

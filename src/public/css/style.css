@@ -12,3 +12,12 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+#map {
+  height: 480px;
+  width: 720px;
+}
+
+#currentLocation {
+  float: right;
+}
