@@ -6,156 +6,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 
   <title>Starter Template - Materialize</title>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- materialize.css is the template styles. if you want to make changes to the style, you can OVERRIDE them in style.css  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <a href="http://materializecss.com/getting-started.html"></a>
 </head>
+
 
 <body>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
+      <a id="logo-container" href="#" class="brand-logo">Home</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
-          <a href="#">Navbar Link</a>
+          <a href="sass.html">About</a>
+        </li>
+        <li>
+          <a href="badges.html">Contact</a>
         </li>
       </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li>
-          <a href="#">Navbar Link</a>
-        </li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse">
-        <i class="material-icons">menu</i>
-      </a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <h1 class="header center orange-text">Our Title</h1>
+      <h1 class="header col s6 orange-text center">
+        <i class="material-icons medium">local_hospital</i>&nbsp;Apotheca</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Change the way you manage your perscriptions</h5>
+        <h6 class="header col s12 light center-align">Change the way you manage your perscriptions</h6>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s4">
+            <!--here-->
+            <div class="icon-block">
+              <h3 class="center light-blue-text">
+                <i class="material-icons">mood_bad</i>
+              </h3>
+              <h5 class="center">Out of meds?</h5>
+
+              <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick up
+                what you need.</p>
+              <a class="waves-effect waves-light btn" href="pharma_find.html" target="_blank">
+                <i class="large material-icons center">location_on</i>&nbsp;&nbsp;Find Pharmacy</a>
+            </div>
+          </div>
+
+          <div class="col s4">
+            <div class="icon-block">
+              <h3 class="center light-blue-text">
+                <i class="material-icons">question_answer</i>
+              </h3>
+              <h5 class="center">Not sure what you need?</h5>
+              <!-- </div> -->
+              <div id="myModal" class="modal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+
+                      <div class="modal-body">
+                        <form id="symptom_form" action="#">
+                          <h5 class="modal-title">Symptom Checker</h5>
+                          <br>
+                          <input name="group1" class="left-align filled-in" type="checkbox" id="test1" value="insomnia" onclick="process_symptoms();"
+                          />
+                          <label for="test1">Insomnia</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="right-align filled-in" type="checkbox" id="test2" value="Difficulty falling asleep" onclick="process_symptoms();"
+                          />
+                          <label for="test2">Difficulty falling asleep</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test3" value="Minor Cuts/Scraps" onclick="process_symptoms();"
+                          />
+                          <label for="test3">Minor Cuts/Scraps</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test4" value="Minor burns" onclick="process_symptoms();" />
+                          <label for="test4">Minor burns</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test5" value="Congestion" onclick="process_symptoms();" />
+                          <label for="test5">Congestion</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test6" value="Sore Throat" onclick="process_symptoms();" />
+                          <label for="test6">Sore Throat</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test7" value="Acne" onclick="process_symptoms();" />
+                          <label for="test7">Acne</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test8" value="Headache" onclick="process_symptoms();" />
+                          <label for="test8">Headache</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test9" value="Toothache" onclick="process_symptoms();">
+                          <label for="test9">Toothache</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test10" value="Backache" onclick="process_symptoms();" />
+                          <label for="test10">Backache</label>
+                          &nbsp;&nbsp;&nbsp;
+                          <input name="group1" class="filled-in" type="checkbox" id="test11" value="Fever" onclick="process_symptoms();" />
+                          <label for="test11">Fever</label>
+                          <br>
+                        </form>
+                        <input id="searchBox" style="display: none;" />
+                        <h5>
+                          Medicines we recommend getting:
+                        </h5>
+                        <div id="medicine"></div>
+                        <!-- it would be nice to be able to wipe out the contents of this until selection -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with our database of common over-the-counter
+                medications.
+              </p>
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                <i class="large material-icons center">healing</i>&nbsp;&nbsp;Diagnose Me</button>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="icon-block">
+              <h3 class="center light-blue-text">
+                <i class="material-icons">local_hospital</i>
+              </h3>
+              <h5 class="center">Need more intensive care?</h5>
+              <p class="light">Whether it be needing to find local hospitals make an appointment, we will help you find what you need.</p>
+              <br>
+              <!-- uses a bit of a hack to open two pages at once -->
+              <a class="waves-effect waves-light btn" href="hospital_find.html" target="_blank" onclick="window.open('doctor_find.html');">
+                <i class="large material-icons center">person_add</i>&nbsp;&nbsp;Get Extra Care</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">flash_on</i>
-            </h3>
-            <h5 class="center">Dispense Meds</h5>
-
-            <p class="light">Our Raspberry Pi Pill Dispenser will help you to keep your over the counter medications safe, secure and organized
-              so you can get a quick solution to whatever ails you.</p>
-
-            <a class="waves-effect waves-light btn">
-              <i class="material-icons left">power</i>Get Started</a>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">group</i>
-            </h3>
-            <h5 class="center">Out of meds?</h5>
-
-            <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick up what
-              you need.</p>
-            <a class="waves-effect waves-light btn">
-              <i class="material-icons left">location_on</i>Find Pharmacy</a>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">local_hospital</i>
-            </h3>
-            <h5 class="center">Not sure what you need?</h5>
-
-            <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with
-              our database <strong>[ask Zakar what I'm referring to]</strong> of common over-the-counter medications.</p>
-            <a class="waves-effect waves-light btn">
-              <i class="material-icons left">healing</i>Diagnose Me</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br>
-    <br>
+  <br>
+  <br>
+  </div>
   </div>
 
   <footer class="page-footer orange">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support
-            and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made by
-        <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <!-- ugly but necessary line breaks -->
+        <br>
+        <br>
+        <br>
       </div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
+  <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="../testing/app.js"></script>
+  <script src="../testing/main.js"></script>
+  <script $(document).ready(function(){$( "#modal1").leanModal(); });></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
 
 </body>
 
