@@ -44,73 +44,45 @@
 
 
       <div class="container">
-        <div class="section">
-          <!--   Icon Section   -->
-          <div class="row">
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h3 class="center light-blue-text">
-                  <i class="material-icons">flash_on</i>
-                </h3>
-                <h5 class="center">Dispense Meds</h5>
+        <div class="row">
+          <div class="col s6">
+            <div class="icon-block">
+              <h3 class="center light-blue-text">
+                <i class="material-icons">group</i>
+              </h3>
+              <h5 class="center">Out of meds?</h5>
 
-                <p class="light">Our Raspberry Pi Pill Dispenser will help you to keep your over the counter medications safe, secure and
-                  organized so you can get a quick solution to whatever ails you.</p>
-
-                <a class="waves-effect waves-light btn">
-
-                  <i class="material-icons left">power</i>Get Started</a>
-
-
-              </div>
+              <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick up
+                what you need.</p>
+              <a class="waves-effect waves-light btn">
+                <i class="material-icons left">location_on</i>Find Pharmacy</a>
             </div>
+          </div>
 
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h3 class="center light-blue-text">
-                  <i class="material-icons">group</i>
-                </h3>
-                <h5 class="center">Out of meds?</h5>
 
-                <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick
-                  up what you need.</p>
-                <a class="waves-effect waves-light btn">
-                  <i class="material-icons left">location_on</i>Find Pharmacy</a>
-              </div>
-            </div>
+          <div class="col s6">
+            <div class="icon-block">
+              <h3 class="center light-blue-text">
+                <i class="material-icons">local_hospital</i>
+              </h3>
+              <h5 class="center">Not sure what you need?</h5>
+              <!-- </div> -->
+              <div id="myModal" class="modal" role="dialog">
+                <div class="modal-dialog">
 
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h3 class="center light-blue-text">
-                  <i class="material-icons">local_hospital</i>
-                </h3>
-                <h5 class="center">Not sure what you need?</h5>
-
-                <div id="myModal" class="modal" role="dialog">
-                  <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                        <div class="modal-footer">
-                          <h5 class="modal-title">Symptom Checker</h4>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                      <div class="modal-footer">
+                        <h5 class="modal-title">Symptom Checker</h5>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       </div>
+
                       <div class="modal-body">
                         <form id="symptom_form" action="#">
                           <br>
-                          <!-- <div class="left-align">
-                            <input name="group1" class="left-align filled-in" type="checkbox" id="test1" value="insomnia" onclick="process_symptoms();"
-                            />
-                            <label for="test1">Insomnia</label>
-                          </div>
-                          <div class="right-align">
-                            <input name="group1" class="right-align filled-in" type="checkbox" id="test2" value="Difficulty falling asleep" onclick="process_symptoms();"
-                            />
-                            <label for="test2">Difficulty falling asleep</label>
-                          </div> -->
+
                           <input name="group1" class="left-align filled-in" type="checkbox" id="test1" value="insomnia" onclick="process_symptoms();"
                           />
                           <label for="test1">Insomnia</label>
@@ -155,118 +127,99 @@
                         <div id="medicine"></div>
                       </div>
                     </div>
-
                   </div>
                 </div>
-                <!-- Modal Structure -->
-                <!-- <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                  </div>
-                </div> -->
-                <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with our database
-                  <strong>[ask Zakar what I'm referring to]</strong> of common over-the-counter medications.</p>
-                <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-                  <i class="material-icons left">healing</i>Diagnose Me</button>
-
-                <!-- <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">healing</i>Diagnose Me</a>  -->
-                <!-- <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Modal</button> -->
-
               </div>
+
+              <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with our database
+                <strong>[ask Zakar what I'm referring to]</strong> of common over-the-counter medications.</p>
+
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                <i class="material-icons left">healing</i>Diagnose Me</button>
+
+
             </div>
           </div>
-
         </div>
-        <br>
-        <br>
       </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  </div>
+  </div>
 
-      <footer class="page-footer orange">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Company Bio</h5>
-              <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help
-                support and continue development on this project and is greatly appreciated.</p>
+  <footer class="page-footer orange" >
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <!-- <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support
+            and continue development on this project and is greatly appreciated.</p> -->
+           <br>
+           <br>
+           <br>
+           <br>
 
-
-            </div>
-            <div class="col l3 s12">
-              <h5 class="white-text">Settings</h5>
-              <ul>
-                <li>
-                  <a class="white-text" href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col l3 s12">
-              <h5 class="white-text">Connect</h5>
-              <ul>
-                <li>
-                  <a class="white-text" href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a class="white-text" href="#!">Link 4</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-            Made by
-            <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-          </div>
+        <div class="col l3 s12">
+          <!-- <h5 class="white-text">Settings</h5> -->
+
+          <!-- <ul>
+            <li>
+              <a class="white-text" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 4</a>
+            </li>
+          </ul>
         </div>
-      </footer>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li>
+              <a class="white-text" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 4</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="footer-copyright">
+      <div class="container"> -->
+        <!-- Made by
+        <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> -->
+      <!-- </div>
+    </div> -->
+  </footer>
 
-      <!-- (function ($) {
-        $(function () {
-    
-            //initialize all modals           
-            $('.modal').modal();
-    
-            //now you can open modal from code
-            $('#modal1').modal('open');
-    
-            //or by click on trigger
-            $('.trigger-modal').modal();
-    
-        }); // end of document ready
-    })(jQuery); // end of jQuery name space -->
 
-      <!--  Scripts-->
-      <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="js/materialize.js"></script>
-      <script src="js/init.js"></script>
-      <script src="../testing/app.js"></script>
-      <script src="../testing/main.js"></script>
-      <script $(document).ready(function(){$( "#modal1").leanModal(); });></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+  <!--  Scripts-->
+  <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="../testing/app.js"></script>
+  <script src="../testing/main.js"></script>
+  <script $(document).ready(function(){$( "#modal1").leanModal(); });></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
 
 </body>
 

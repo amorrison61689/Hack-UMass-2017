@@ -35,6 +35,7 @@
   font-size: 100%;
 }
 
-.modal-footer {
-  text-align: left;
+.page-footer{
+  background-image: url("../Resources/PillsHackUMass.png");
+  background-position: center;
 }
