@@ -48,10 +48,13 @@ document.getElementById("autoFill").addEventListener('click', getLocation);
  /*Google Maps API: https://developers.google.com/maps/documentation/javascript/tutorial*/
  var map;
  var marker;
+ var infowindow;
+ var currentLocation;
+ 
  function initMap() {
      map = new google.maps.Map(document.getElementById('map'), {
          center: {lat: 39, lng:  -72.5261544},
-         zoom: 8
+         zoom: 15
      });
 
      marker = new google.maps.Marker({
@@ -62,6 +65,7 @@ document.getElementById("autoFill").addEventListener('click', getLocation);
  }
 
  function refreshMap(position) {
+     currentLocation = position;
     map = new google.maps.Map(document.getElementById('map'), {
         // center: {lat: 42.391148799999996, lng:  -72.5261544},
         center: { lat: position.coords.latitude, lng: position.coords.longitude},
@@ -74,4 +78,40 @@ document.getElementById("autoFill").addEventListener('click', getLocation);
         title: 'Hello World!'
       });
 
+ }
+ document.getElementById("findPharmacy").addEventListener('click', findPharmacy);
+
+ function findPharmacy(){
+     getLocation();
+    infowindow = new google.maps.InfoWindow();
+
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+      location: { lat: currentLocation.coords.latitude, lng: currentLocation.coords.longitude},
+      radius: 100000,
+      type: ['pharmacy']
+    }, callback);
+  }
+
+  function callback(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
+    }
+  }
+
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+      'Address: '  + 
+      place.vicinity + '</div>');
+      infowindow.open(map, this);
+    });
  }
