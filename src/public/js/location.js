@@ -78,6 +78,7 @@ function refreshMap(position) {
     });
 
 }
+
 document.getElementById("findPharmacy").addEventListener('click', findPharmacy);
 
 function findPharmacy() {

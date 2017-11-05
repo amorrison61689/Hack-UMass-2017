@@ -6,6 +6,8 @@
  * Made By MaterializeCSS.com
  */
 
+/* TBH everything from line 18 on is Mr. Perry Warner :D */
+
 .icon-block {
   padding: 0 15px;
 }
@@ -41,7 +43,41 @@
 }
 
 #map {
-  height: 400px;
+  
+  /* height: 400px; */
+  /* width: 400px; prefer it to be like this for the future, when we put the maps in popups*/
+  height: 100%;
   width: 100%;
   background-color: grey;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+  width: 100%;
+}
+
+/* #logo-container {
+  font-size: 100%;
+} */
+
+#needADoctor {
+  width: 50%;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+h5 {
+  color: #ff9800;
 }
