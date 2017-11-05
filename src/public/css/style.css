@@ -12,3 +12,29 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.container {
+  margin: 0 auto;
+  /* max-width: 1280px; */
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* opacity: .4; */
+  padding: 0;
+  max-height: 90%;
+  width: 50%;
+  margin: auto;
+  overflow-y: auto;
+  /* border-radius: 2px; */
+  will-change: top, opacity;
+  font-size: 100%;
+}
+
+.modal-footer {
+  text-align: left;
+}
