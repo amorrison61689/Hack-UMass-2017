@@ -67,7 +67,6 @@ function initMap() {
 function refreshMap(position) {
     currentLocation = position;
     map = new google.maps.Map(document.getElementById('map'), {
-        // center: {lat: 42.391148799999996, lng:  -72.5261544},
         center: { lat: position.coords.latitude, lng: position.coords.longitude },
         zoom: 8
     });
