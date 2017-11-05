@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 
   <title>Starter Template - Materialize</title>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- materialize.css is the template styles. if you want to make changes to the style, you can OVERRIDE them in style.css  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <a href="http://materializecss.com/getting-started.html"></a>
 </head>
+
 
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -40,167 +42,174 @@
         <h5 class="header col s12 light">Change the way you manage your perscriptions</h5>
       </div>
 
-      <!-- add search bar -->
+
       <div class="container">
         <div class="section">
+          <!--   Icon Section   -->
           <div class="row">
-            <div class="col s6 offset-s3">
-              <span class="flow-text"></span>
-              <div class="wrap">
-                <form>
-                  <div>
-                    <input type="search" id="mySearch" name="q" style="direction: rtl; text-align: center;" placeholder="What can we help you with today">
-                    <div class="col s6 offset-s4">
-                      <button>Search</button>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h3 class="center light-blue-text">
+                  <i class="material-icons">flash_on</i>
+                </h3>
+                <h5 class="center">Dispense Meds</h5>
+
+                <p class="light">Our Raspberry Pi Pill Dispenser will help you to keep your over the counter medications safe, secure and
+                  organized so you can get a quick solution to whatever ails you.</p>
+
+                <a class="waves-effect waves-light btn">
+
+                  <i class="material-icons left">power</i>Get Started</a>
+
+
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h3 class="center light-blue-text">
+                  <i class="material-icons">group</i>
+                </h3>
+                <h5 class="center">Out of meds?</h5>
+
+                <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick
+                  up what you need.</p>
+                <a class="waves-effect waves-light btn">
+                  <i class="material-icons left">location_on</i>Find Pharmacy</a>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h3 class="center light-blue-text">
+                  <i class="material-icons">local_hospital</i>
+                </h3>
+                <h5 class="center">Not sure what you need?</h5>
+                
+                <div id="myModal" class="modal" role="dialog" >
+                  <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Symptom Checker</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Put the symptom form here!</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
                     </div>
+
                   </div>
-                </form>
+                </div> 
+                <!-- Modal Structure -->
+                <!-- <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                  </div>
+                </div> -->
+                <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with our database
+                  <strong>[ask Zakar what I'm referring to]</strong> of common over-the-counter medications.</p>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                  <i class="material-icons left">healing</i>Diagnose Me</button>
+
+                <!-- <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">healing</i>Diagnose Me</a>  -->
+                <!-- <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Modal</button> -->
+
               </div>
             </div>
           </div>
+
         </div>
+        <br>
+        <br>
       </div>
-    </div>
-  </div>
 
-  <!-- Modal Trigger Dispense Meds
-  <a id="DispenseMeds" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-    Modal Trigger Out of Meds
-  <a id="OutofMeds" class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal</a>
-   Modal Trigger Diagnose
-  <a id="Diagnose" class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal</a> -->
+      <footer class="page-footer orange">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Company Bio</h5>
+              <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help
+                support and continue development on this project and is greatly appreciated.</p>
 
 
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">flash_on</i>
-            </h3>
-            <h5 class="center">Dispense Meds</h5>
-
-            <p class="light">Our Raspberry Pi Pill Dispenser will help you to keep your over the counter medications safe, secure and organized
-              so you can get a quick solution to whatever ails you.</p>
-
-            <a id="DispenseMeds" class="waves-effect waves-light btn modal-trigger" href="#modal1">
-              <i class="material-icons left">power</i>Get Started</a>
-            <!-- Modal Structure -->
-            <div id="DispenseMeds" class="modal">
-              <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-              </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-              </div>
             </div>
-
+            <div class="col l3 s12">
+              <h5 class="white-text">Settings</h5>
+              <ul>
+                <li>
+                  <a class="white-text" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col l3 s12">
+              <h5 class="white-text">Connect</h5>
+              <ul>
+                <li>
+                  <a class="white-text" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="white-text" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">group</i>
-            </h3>
-            <h5 class="center">Out of meds?</h5>
-
-            <p class="light">We've got you covered! Using our handy tool, we can scan your local area and find you a pharmacy to pick up what
-              you need.</p>
-            <a class="waves-effect waves-light btn">
-              <i class="material-icons left">location_on</i>Find Pharmacy</a>
+        <div class="footer-copyright">
+          <div class="container">
+            Made by
+            <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
           </div>
         </div>
+      </footer>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h3 class="center light-blue-text">
-              <i class="material-icons">local_hospital</i>
-            </h3>
-            <h5 class="center">Not sure what you need?</h5>
+      <!-- (function ($) {
+        $(function () {
+    
+            //initialize all modals           
+            $('.modal').modal();
+    
+            //now you can open modal from code
+            $('#modal1').modal('open');
+    
+            //or by click on trigger
+            $('.trigger-modal').modal();
+    
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space -->
 
-            <p class="light">Let's talk about your symptoms. Fill out this quick form and we will pair you with our database
-              <strong>[ask Zakar what I'm referring to]</strong> of common over-the-counter medications.</p>
-            <a class="waves-effect waves-light btn">
-              <i class="material-icons left">healing</i>Diagnose Me</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br>
-    <br>
-  </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support
-            and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made by
-        <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script>
-      $(document).ready(function() {
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $("#modal1").leanModal();
-      });
-      </script>
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+      <script $(document).ready(function(){$( "#modal1").leanModal(); });></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
