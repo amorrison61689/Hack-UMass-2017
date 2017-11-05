@@ -1,4 +1,4 @@
-# Hack-UMass-2017
+# Hack-UMass-2017 --- SEE Issue for latest update!
 
 > Project description here
 
