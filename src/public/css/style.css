@@ -31,7 +31,7 @@
   max-height: 90%;
   width: 50%;
   margin: auto;
-  overflow-y: auto;
+  overflow-y: hidden !important;
   /* border-radius: 2px; */
   will-change: top, opacity;
   font-size: 100%;
