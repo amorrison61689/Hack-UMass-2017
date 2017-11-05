@@ -1,0 +1,60 @@
+{
+  "medicine": {
+    "tylenol": {
+      "description": "Tylenol (acetaminophen) is a pain reliever and a fever reducer.",
+      "side_effects": [
+        "Usually no side effects.",
+        "Serious allergic reactions to this drug are rare."
+      ],
+      "uses": [
+        "pain",
+        "headaches",
+        "toothaches",
+        "backaches",
+        "fever"
+      ]
+    },
+    "Robitussin": {
+      "description": "Robitussin helps clear mucus or phlegm from the chest when you have congestion from a cold or flu.",
+      "side_effects": [
+        "Less common or rare side effects include diarrhea, dizziness, headache, hives, nausea or vomiting, skin rash, or stomach pain."
+      ],
+      "uses": [
+        "chest congestion",
+        "throat congestion"
+      ]
+    },
+    "Tretinoin": {
+      "description": "Tretinoin is used to treat pimples.",
+      "side_effects": [
+        "Common side affects include burning feeling or stingin of skin, unexpected lightening of skin of treated area, peeling of skin, redness of skin, and unusual dryness of skin",
+        "Rare side effects include darkening of treated skin"
+      ],
+      "uses": [
+        "acne",
+        "pimples"
+      ]
+    },
+    "Melatonin": {
+      "description": "Melatonin is the natural hormone your body secretes that helps to maintain your wake-sleep cycle.",
+      "side_effects": [
+        "Common side effects include drowsiness, stomach pain, headache, and dizziness."
+      ],
+      "uses": [
+        "insomnia",
+        "difficulty falling asleep"
+      ]
+    },
+    "Neosporin": {
+      "description": "Neosporin is an antibiotic that kills bacteria on your skin.",
+      "side_effects": [
+        "Common side effects include itching, skin rash, redness, and swelling."
+      ],
+      "uses": [
+        "minor cuts",
+        "minor scrapes",
+        "burns"
+      ]
+    }
+  }
+}

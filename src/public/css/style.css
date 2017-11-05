@@ -13,11 +13,29 @@
 	font-size: inherit;
 }
 
-#map {
-  height: 480px;
-  width: 720px;
+.container {
+  margin: 0 auto;
+  /* max-width: 1280px; */
+  width: 100%;
 }
 
-#currentLocation {
-  float: right;
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* opacity: .4; */
+  padding: 0;
+  max-height: 90%;
+  width: 50%;
+  margin: auto;
+  overflow-y: auto;
+  /* border-radius: 2px; */
+  will-change: top, opacity;
+  font-size: 100%;
+}
+
+.page-footer{
+  background-image: url("../Resources/PillsHackUMass.png");
+  background-position: center;
 }
