@@ -16,9 +16,9 @@
 
         var map;
         var infowindow;
-
-        function initMap() {
-            var my_location = { lat: 42.3911363, lng: -72.5261548 };
+        navigator.geolocation.getCurrentPosition(initMap);
+        function initMap(position) {
+            var my_location = { lat: position.coords.latitude , lng: position.coords.longitude };
             //use location getter service to get this automatically given user location.
 
             map = new google.maps.Map(document.getElementById('map'), {
